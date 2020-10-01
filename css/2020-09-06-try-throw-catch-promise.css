@@ -1,0 +1,32 @@
+html, body {
+    background-color: skyblue;
+    margin: 0;
+}
+
+body {
+    counter-reset: h4Counter;
+}
+h4 {
+    padding-left: 10px;
+    color: darkred;
+}
+h4:before {
+    counter-increment: h4Counter;
+    content: '(' counter(h4Counter)  ').  ';
+}
+.dddw-item-list:nth-child(odd) {
+    background-color: peachpuff;
+    color: blue;
+}
+.dddw-item-list:nth-child(even) {
+    background-color: lightskyblue;
+    color: purple;
+}
+.errEg {
+    border-radius: 10px;
+}
+
+div {
+    border: orangered 3px double;
+    margin: 3px;
+}

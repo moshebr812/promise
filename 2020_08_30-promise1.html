@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise1</title>
+    <link rel="stylesheet" href="css/2020_08_30-promise1.css">
+
+</head>
+<body>
+
+
+<br>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<br>
+<button onclick="applyPie_A()">applyPie_A()</button>  // promise, resolve(), reject(), .then()  .catch()
+<br>
+<label for="forceUncaughtError_A" style="color: lime;">Simulate Uncaught Error: </label>
+<input type="checkbox" id="forceUncaughtError_A"> <label> (uncaught error at step washApple)</label>
+<br>
+<label style="color: lime;">Fail logically using rejectCallback(errMsg)</label>
+
+<input type="radio" id="rejectNoReturn" name="rejectCallback" value="rejectNoReturn">
+<label for="rejectNoReturn">rejectCallback(), no return</label><br>
+<input type="radio" id="rejectWithReturn" name="rejectCallback" value="rejectWithReturn">
+<label for="rejectWithReturn">rejectCallback(), with return</label><br>
+
+<ol>
+    <li>this function does NOT return promise</li>
+    <li>it calls internally a set of Promise</li>
+    <li>Promise: obliged to return either funcResolve or funcReject</li>
+    <li>if we want to logically fail: call "reject()" & return </li>
+    <li>But here we DID NOT refer to an unexpected error</li>
+    <li>In this example: no usage of throw error</li>
+</ol>
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<br>
+<button onclick="create2ApplePies_InParallel()">create2ApplePies_InParallel()</button>  // promise, resolve(), reject(), .then()  .catch()
+<br> in this example i call create2ApplePies() twice, but the main function is not a promise & that's why they run in parallel
+<br> <br>
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<br>
+<button onclick="createPiesInARow()">createPiesInARow() - Promise</button>  // promise, resolve(), reject(), .then()  .catch()
+<br> This time i create a new create2ApplePies_ReturnPromise, so each function is a promise and I can run them in-synch, and not a-synch
+<br> <br>
+
+
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+<br>
+<button id="idBasicTryCatch">Try, Catch</button>  // try, throw, catch, finally regardless of Promise
+
+
+</body>
+<script src="2020_08_30-promise1.js" ></script>
+</html>

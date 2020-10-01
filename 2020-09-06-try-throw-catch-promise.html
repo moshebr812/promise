@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try throw catch</title>
+    <link rel="stylesheet" href="css/2020-09-06-try-throw-catch-promise.css">
+</head>
+<body>
+
+<div>
+    <div>
+        <h4>Testing try, catch, throw - without promise</h4>
+        <label for="idTrayCatch_A">Select Error Type</label>
+        <select name="tryCatch" id="idTrayCatch_A" onchange="dddwTrayCatch_A()">
+            <option value="empty">...</option>
+            <option value="undefinedVariable" class="dddw-item-list">Undefined Variable</option>
+            <option value="propertyNotDefined" class="dddw-item-list">Property Not Defined</option>
+            <option value="logicalErrUsingThrow" class="dddw-item-list">logical Error Using Throw</option>
+            <option value="forgotToCatchMyOwnThrow" class="dddw-item-list">FORGOT to CATCH after I THROW</option>
+        </select>
+
+    </div>
+
+    <div>
+        <h4>Throwing Erros - extend object type Error</h4>
+        <button onclick="throwBasicErrMessgage()" class="errEg">throwBasicErrMessgage()</button>  <br><br>
+        <button onclick="extendThrowErrMessgage()" class="errEg">extendThrowErrMessgage()</button>
+    </div>
+
+    <div>
+        <h3> Define Here where You want to generate a failure</h3>
+        <label>...Fail Prepare Dough</label><input id="idFailRepareDough" type="checkbox">
+        <label>...Fail Rise Dough</label><input id="idFailRiseDough" type="checkbox">
+        <label>...Fail Add Souce </label><input id="idFailAddSouce" type="checkbox">
+        <label>Random Failure Ratio: </label><input id="idFailRandom" type="checkbox">
+        <input type="number" min="0" max="1" value="0.3" step="0.1" style="width: 50px; font-size: 12px;" id="idFailRatio">
+        <button onclick="isRandomFailure()" style="width: 120px; height: 20px; color: red;">testFailureRatio</button>
+    </div>
+    <div>
+        <h4>bake 1 pizzas - pass an Object / parameter between all the calls</h4>
+        <button onclick="bake_1_Pizza()">bake_1_Pizza()</button>
+        <label>......calling bake_1_Pizza() only once</label>
+
+    </div>
+
+    <div>
+        <h4>bake 2 pizzas in parallel</h4>
+        <button onclick="bake_2_Pizzas_inParallel()">bake_2_Pizzas_inParallel()</button>
+        <label>.... calling bake_1_Pizza() twice [for Linda & Bob in parallel]</label>
+    </div>
+
+    <div>
+        <h4>bake N pizzas in Sequence</h4>
+        <button onclick="bake_N_Pizzas_inSequence()">bake_N_Pizzas_inSequence()</button>
+    </div>
+
+    <div>
+        <h4>Promise All</h4>
+        <button onclick="PromiseAll_1()">PromiseAll_1()</button>
+    </div>
+    <div>
+        <h4>Not Yet in user</h4>
+
+        <labal style="color: red;">Fail Linda At (only 1):</labal>
+        <input type="radio" name="failForLinda" value="prepare" id="failPrepareForLinda">
+        <label for="failPrepareForLinda">Prepare Dough</label>
+        <input type="radio" name="failForLinda" value="rise" id="failRiseForLinda">
+        <label for="failRiseForLinda">Let Dough Rise</label>
+        <input type="radio" name="failForLinda" value="souce" id="failSouceForLinda">
+        <label for="failSouceForLinda">Add Souce</label>
+
+    </div>
+</div>
+</body>
+<script src="2020-09-06-try-throw-catch-promise.js"></script>
+</html>

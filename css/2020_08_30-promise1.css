@@ -1,0 +1,13 @@
+html, body {
+    background-color: #FF8989;
+}
+
+ol, il, label, input {
+	font-size:  20px;
+}
+
+button {
+    font-size: 25px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
